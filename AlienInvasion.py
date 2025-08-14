@@ -213,7 +213,6 @@ def find_alien_ship_coords():
         Alien_ship.x = ALIEN_SHIP_WIDTH + 2* ALIEN_SHIP_WIDTH * alien_number
         alien_ship_coords.append(Alien_ship.x)
 '''
-    
 #Запускаю окошко
 while True:
     count_sek += 1
@@ -248,7 +247,6 @@ while True:
             mouse = event.pos 
             if X_play_image < mouse[0] < X_play_image + 250 and Y_play_image < mouse[1] < Y_play_image+180:
                 start_game = True
-
 
             # нажатие на кнопки после окончания игры
             if player_is_alive == False:
@@ -308,7 +306,6 @@ while True:
             new_alien = Enemy()               # Создать экземпляр датакласса Enemy
             new_alien.bullet = Bullet()       # Создать экземпляр датакласса Bullet, который принадлежит экземпляру датакласса Enemy
             alien_ship_list.append(new_alien) # Поместить созданный обьект в список
-
 
         bullet_list = []
 
@@ -493,9 +490,7 @@ while True:
     else:
         screen.blit(start_background, (0, 0))
         screen.blit(play_image, (X_play_image , Y_play_image))
-        
 
-    
     #find_alien_ship_coords()
     # Вывод 60 кадров в сек
     clock.tick(fps)
